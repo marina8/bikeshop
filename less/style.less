@@ -389,7 +389,7 @@ button[type="submit"] {
 
 .bk-options {
   display: inline-block;
-  margin-left: 11%;
+  margin-left: 33px;
   .form-control {
     width: 140px;
     height: 49px;
@@ -398,6 +398,10 @@ button[type="submit"] {
   button {
     margin-left: 5px;
   }
+  .bk-select{
+  display: inline-block;
+    margin-bottom: 5px;
+}
 }
 
 .bk-options select {
@@ -444,9 +448,7 @@ button[type="submit"] {
   }
 }
 
-.form-group {
-  width: 450px;
-}
+
 
 .bk-form-horizontal input {
   display: inline-block;
@@ -484,11 +486,14 @@ textarea:-moz-placeholder {
 
 /*FOOTER ROW*/
 footer {
-  padding-top: 12px;
+  padding-top: 30px;
   padding-bottom: 12px;
   background: #f0f019;
-  .navbar-brand img {
+  .navbar-nav{
     margin-top: -15px;
+  }
+  .navbar-brand img {
+    margin-bottom: 10px;
   }
   .navbar-nav li {
     display: inline-block;
@@ -534,22 +539,87 @@ footer {
   }
   header .navbar-nav {
     margin-left: 0;
+    background: #000;
+    border-radius: 10px;
+    li{
+      text-align: center;
+    }
+  }
+  .dropdown:hover .dropdown-menu{
+    background: transparent;
+    margin-top: 0;
   }
   .dropdown-menu{
-    left:20%;
+    display:block;
+    width:100%;
+
+    li>a{
+      padding-top:10px;
+      padding-bottom:10px;
+    }
+
 }
+  .navbar-nav li a:hover,
+  .navbar-nav li a:focus{
+    background: none;
+    color:#f0f019;
+  }
+  .navbar-collapse:hover a:hover{
+    background: none;
+  }
+  li.dropdown{
+    margin-bottom: 120px;
+
+  }
 
 
 }
 
 @media (max-width: 650px) {
-  footer .navbar-nav {
-    margin-top: 50px;
+  footer {
+    .navbar-nav {
+
+      margin-top: 10px;
+      margin-left: 0;
+    }
+
+    .navbar-nav li {
+      display: block;
+      text-align: center;
+    }
+    .navbar-brand {
+    display:block;
+      float:none;
+      margin-left: 16px;
+      height:auto;
+     img{
+       margin-right:auto;
+       margin-left: auto;
+     }
+
+    }
+
+  }
+}
+
+@media (max-width: 570px){
+  .bk-form-horizontal input{
+    width:100%;
+  }
+}
+
+@media (max-width: 1152px) {
+  .bk-item-desc {
+    margin-left: 35px;
+    .bk-options {
+      margin-left: 10px;
+      width: 100%;
+    }
+  }
+
+}
+@media (max-width: 876px){
+  .bk-options button{
     margin-left: 0;
   }
-
-  footer .navbar-nav li {
-    display: block;
-  }
-
 }
